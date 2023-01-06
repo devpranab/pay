@@ -10,7 +10,7 @@ function App() {
         <h4 className="text-decoration-underline">Order Address</h4>
         </div>
         <div className="col-md-6 border p-2">
-          <h4>Payment Way</h4>
+          <h4>Payment Now</h4>
         <ProcessPayment/>
         </div>
       </div>
