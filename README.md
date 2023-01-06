@@ -10,7 +10,7 @@ https://www.npmjs.com/package/@stripe/react-stripe-js
 https://dashboard.stripe.com/test/apikeys  
  - npm install --save @stripe/react-stripe-js @stripe/stripe-js
 
-3. create payment Process component with simple card form
+3. Create payment Process component with simple card form
 https://github.com/stripe/react-stripe-js#readme  
 
 4. Use detail credit card from and avoid login after page refresh
