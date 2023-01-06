@@ -35,6 +35,8 @@ const useOptions = () => {
 };
 
 const SplitCardForm = ({ handlePayment }) => {
+  const [paymentError, setPaymentError] = useState(null);
+  const [paymentSuccess, setPaymentSuccess] = useState(null);
   const stripe = useStripe();
   const elements = useElements();
   const options = useOptions();
@@ -52,11 +54,13 @@ const SplitCardForm = ({ handlePayment }) => {
     });
 
     if (error) {
-        console.log('[error]', error);
+      setPaymentSuccess(null);
+      setPaymentError(error.message);
     } else {
-        console.log('[PaymentMethod]', paymentMethod);
+      setPaymentError(null);
+      setPaymentSuccess(paymentMethod.id);
     }
-};
+  };
 
   return (
     <div>
@@ -74,7 +78,10 @@ const SplitCardForm = ({ handlePayment }) => {
           Pay
         </button>
       </form>
-
+      {paymentError && <p className="text-danger mt-3">{paymentError}</p>}
+      {paymentSuccess && (
+        <p className="text-success mt-3">Payment was successful</p>
+      )}
     </div>
   );
 };
