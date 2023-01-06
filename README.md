@@ -11,6 +11,8 @@ https://dashboard.stripe.com/test/apikeys
  - npm install --save @stripe/react-stripe-js @stripe/stripe-js
 
 3. create payment Process component with simple card form
+https://github.com/stripe/react-stripe-js#readme  
+
 4. Use detail credit card from and avoid login after page refresh
 5. Handle payment processing error and success
 6. conditional payment form and store payment data on database
